@@ -1,0 +1,82 @@
+<html>
+
+<head>
+
+
+</head>
+<style>
+  div {
+
+    border: 2px solid black;
+    background: orange;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    font-family: tahoma;
+  }
+
+  h1 {
+    background: black;
+    color: white;
+
+  }
+</style>
+
+<body background="img/food14.jpg" gcolor="#b3ffff" align="center">
+  <center>
+    <h1 backgrond="white">Basal Metaboloic Rate</h1>
+    <div>
+
+      <form action="#" name="quiz">
+        <br><br>
+        GENDER:
+
+        <input type="radio" id="gender" name="gender" value="m" checked> Male
+        <input type="radio" id="gender" name="gender" value="f"> Female<br><br><br>
+
+        AGE:
+        <input type="number" id="age" value="18"> In yrs.<br><br><br>
+        HEIGHT:
+        <input type="number" id="height" value="150"> In cms<br><br><br>
+        WEIGHT:
+        <input type="number" id="weigth" value="50">In kgs<br><br><br>
+        <br>
+
+        <button type="button" onclick="">
+          Result</button>
+      </form>
+      <p id="lblResult">Calculate BMR</p>Kcal
+    </div>
+  </center>
+  <script>
+    var bmr;
+    function calc() {
+      var age = document.getElementById("age").value;
+      var gender = document.quiz.gender;
+      var height = document.getElementById("height").value;
+      var weigth = document.getElementById("weigth").value;
+      for (i = 0; i < gender.length; i++) {
+
+        if (gender[i].checked == true) {
+
+          bmr = 66.5 + (13.75 * weigth) + (5.003 * height) - (6.755 * age);
+          break;
+        }
+        else {
+
+          bmr = 655.1 + (9.563 * weigth) + (1.850 * height) - (4.676 * age);
+          break;
+        }
+      }
+    }
+
+    document.getElementsByTagName("button")[0].addEventListener("click", function () {
+      calc();
+      document.getElementById('lblResult').innerHTML = bmr;
+
+    })
+
+  </script>
+</body>
+
+</html>

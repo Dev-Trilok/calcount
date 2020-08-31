@@ -1,0 +1,20 @@
+<style>
+.full_width
+{
+ width:100%;
+ float:left;
+}
+.one_third
+{
+width:28%;
+background-color:green;
+font-family:tahoma;
+font-size:20px;
+color:red;
+margin:10px;
+padding:10px;
+box-shadow:2px 2px white;
+font-style:italic;
+min-height:200px;
+}
+</style>

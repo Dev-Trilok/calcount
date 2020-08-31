@@ -1,0 +1,21 @@
+<style>
+.table 
+{
+ display:inline-black;
+ background-color:#ccc;
+ margin:10px;
+ padding:10px;
+ border-radius:10px;
+ border:1px solid black;
+ color:red;
+}
+.table tr td a
+{
+ text-decoration:none;
+}
+.table tr td a
+{
+color:blue;
+background-color:green;
+}
+</style>

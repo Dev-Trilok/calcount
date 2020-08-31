@@ -1,0 +1,73 @@
+#full{
+Width : 100%;
+Height : 100%;
+Background : Orange;
+Border : solid black;
+Padding: 5px;
+
+}
+#banner 
+{
+
+Width : 98%;
+Height : 30%;
+Background : Gray;
+Border : Solid red;
+
+}
+#banner ul li
+{
+  float: Left;
+ list-style :none;
+  padding: 3px;
+  text-decoration:none;
+Color: White;
+background :Blue ;
+Margin: 2px;
+}
+#left
+{
+Width : 40%;
+Height: 65%;
+Float:left;
+Background : Yellow;
+Border : 2px;
+Text decoration : none;
+
+
+}
+#left ul li
+{
+Text-decoration: none;
+Color: White;
+background :Blue ;
+Margin: 2px;
+list-style: None;
+}
+#right 
+{
+Float: right;
+Width: 60%;
+Height : 65%;
+Background : Green;
+Margin-bottom : 5px;
+
+}
+#inright
+{
+Width: 100%;
+Height : 50%;
+Background:tan;
+
+Height :50%;
+
+}
+
+
+
+
+
+
+
+
+

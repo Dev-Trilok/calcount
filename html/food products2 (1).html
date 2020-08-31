@@ -1,0 +1,260 @@
+<html>
+<head>
+<script language="javascript">
+
+var bvr, brf,lunch,dinner,calories;
+lunch=0;
+dinner=0;
+
+function lenable()
+{
+
+if (document.getElementById("ln").checked == true) 
+{                    
+document.getElementById("lc").disabled = true;
+document.getElementById("lr").disabled = true;
+document.getElementById("ls1").disabled = true;
+document.getElementById("ls2").disabled = true;
+document.getElementById("ld").disabled = true;
+}                   
+else 
+{
+                       
+document.getElementById("lc").disabled = false;
+document.getElementById("lr").disabled = false;
+document.getElementById("ls1").disabled = false;
+document.getElementById("ls2").disabled = false;
+document.getElementById("ld").disabled = false;
+}
+
+}
+
+function denable()
+{
+
+if (document.getElementById("dn").checked == true) 
+{                    
+document.getElementById("dc").disabled = true;
+document.getElementById("dr").disabled = true;
+document.getElementById("ds1").disabled = true;
+document.getElementById("ds2").disabled = true;
+document.getElementById("dd").disabled = true;
+}                   
+else 
+{
+                       
+document.getElementById("dc").disabled = false;
+document.getElementById("dr").disabled = false;
+document.getElementById("ds1").disabled = false;
+document.getElementById("ds2").disabled = false;
+document.getElementById("dd").disabled = false;
+}
+
+}
+
+function cal()
+{
+
+lunch=0;
+dinner=0;
+	if(f1.bever.value=="none")
+	{
+		bvr=0;
+	}
+	if(f1.bever.value=="tea")
+	{
+		bvr=60;
+	}
+	if(f1.bever.value=="coffee")
+	{
+		bvr=80;
+	}
+	if(f1.bever.value=="milk")
+	{
+		bvr=70;
+	}
+
+
+
+	if(f1.break.value=="none")
+	{
+		brf=0;
+	}
+	if(f1.break.value=="poha")
+	{
+		brf=120;
+	}
+	if(f1.break.value=="upma")
+	{
+		brf=120;
+	}
+	if(f1.break.value=="shira")
+	{
+		brf=150;
+	}
+	if(f1.break.value=="idli")
+	{
+		brf=120;
+	}
+
+
+
+
+if (document.getElementById("ln").checked == true) {
+                        lunch=lunch+0;
+                    }
+
+if (document.getElementById("lc").checked == true) {
+
+                        lunch=lunch+120;
+                    }
+if (document.getElementById("lr").checked == true) {
+                        lunch=lunch+120;
+                    }
+
+if (document.getElementById("ls1").checked == true) {
+
+                        lunch=lunch+60;
+                    }
+if (document.getElementById("ls2").checked == true) {
+
+                        lunch=lunch+50;
+                    }
+if (document.getElementById("ld").checked == true) {
+
+                        lunch=lunch+40;
+                    }
+
+if (document.getElementById("dn").checked == true) {
+                        dinner=dinner+0;
+document.getElementById("dc").disabled = true;
+                    }
+
+if (document.getElementById("dc").checked == true) {
+
+                        dinner=dinner+120;
+                    }
+if (document.getElementById("dr").checked == true) {
+                        dinner=dinner+120;
+                    }
+
+if (document.getElementById("ds1").checked == true) {
+
+                        dinner=dinner+60;
+                    }
+if (document.getElementById("ds2").checked == true) {
+
+                        dinner=dinner+50;
+                    }
+if (document.getElementById("dd").checked == true) {
+
+                        dinner=dinner+40;
+                    }
+
+calories=bvr+brf+lunch+dinner;
+
+document.getElementById("c").value = calories;
+}
+
+
+</script>
+
+<style>
+ input[type=button],input[type=reset]
+ {
+ background-color: #4CAF50;
+ color: white;
+ padding: 3px 10px;
+ border: solid 1px black;
+ border-radius: 4px;
+width:100px;
+margin-bottom: auto;
+}
+ 
+input[type=button]:hover, input[type=reset]:hover{
+    background-color: ;
+    }
+input[type=text]
+    {
+        box-shadow: 100px;
+    }
+    form{
+        font-family:sans-serif;
+    }
+
+input[type=checkbox]
+{}
+  
+  html {
+  font-family: sans-serif;
+  }
+  form {
+  width:420px;margin:0 auto;
+  }
+  div 
+  {
+  margin-bottom:1px;
+  
+  }
+  fieldset 
+  {background: cyan;border:5px solid blue;}
+  h4 {
+  padding:1px;background: blue;color: cyan;
+  }
+</style>
+    
+
+</head>
+<body background="bac.gif" >
+
+<center><h1>Calorie Calculator</h1></center>
+   
+        
+<form name="f1" action="#">
+<fieldset><div>
+<center><h4>Beverages:</h4>
+<select name="bever">
+<option value="none">None</option>
+<option value="tea">Tea</option>
+<option value="coffee">Coffee</option>
+<option value="milk"> Milk</option></center>
+
+</select></div>
+<br><br><div><center><h4>
+Breakfast:</h4>
+<select name="break"> 
+<option value="none">None</option>
+<<option value="poha">Poha</option>
+<option value="upma">Upma</option>
+<option value="shira">Shira</option>
+<option value="idli">Idli</option>
+</select>
+<br><br></center></div><div><h4>
+<center>lunch:</h4></center>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="txtitem1" id="ln" onclick="lenable()">None <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="txtitem2" id="lc"> Chappati<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="txtitem3" id="lr"> Rice<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="txtitem4" id="ls1">Sabji<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="txtitem5" id="ls2"><label>Salad</label><br></div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="txtitem6" id="ld"> dal<br>
+<br></div>
+<div><h4>
+<center>Dinner:</h4><ul style="list-style-type: none"></center>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"name="txtitem" id="dn" onclick="denable()">None<br> </li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"name="txtitem" id="dc">Chappati<br></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"name="txtitem" id="dr">Rice<br></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"name="txtitem" id="ds1">Sabji<br></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"name="txtitem" id="ds2">Salad<br></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"name="txtitem" id="dd">dal<br></li></ul>
+<br>
+<br></div>
+<div><center>
+<input type="button" value="CALCULATE " onClick="cal()">
+<input type="text" name="calories" id="c" value="0">Kcal<br><br>
+<input type="reset" value="Reset"></center>
+</div>
+</form>
+
+</fieldset>
+</body>
+</html>
